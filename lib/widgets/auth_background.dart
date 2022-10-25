@@ -32,7 +32,8 @@ class _HeaderIcon extends StatelessWidget {
     return SafeArea(
         child: Container(
             width: double.infinity,
-            child: Icon(Icons.person_pin, color: Colors.white, size: 100)));
+            child:
+                Image(image: AssetImage('assets/LogoApp.png'), height: 190)));
   }
 }
 
@@ -57,8 +58,8 @@ class _PurpeBox extends StatelessWidget {
 
   BoxDecoration _pupleBackground() => BoxDecoration(
           gradient: LinearGradient(colors: [
-        Color.fromRGBO(63, 63, 156, 1),
-        Color.fromRGBO(90, 70, 178, 1)
+        Color.fromRGBO(174, 5, 112, 1),
+        Color.fromRGBO(48, 10, 104, 1)
       ]));
 }
 

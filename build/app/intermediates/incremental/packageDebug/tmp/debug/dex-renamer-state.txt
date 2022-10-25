@@ -1,4 +1,4 @@
-#Tue Oct 18 15:00:04 COT 2022
-base.0=C\:\\Users\\Adan Arias\\Desktop\\ciclo 4\\proyectoflutterapp\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+#Mon Oct 24 20:44:23 COT 2022
+base.0=D\:\\Alejo\\Universidad\\Udea\\Ciclo4\\DropApp\\Ciclo4MinTic\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex
