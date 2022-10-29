@@ -25,9 +25,11 @@ class LoginScreen extends StatelessWidget {
             ],
           )),
           SizedBox(height: 50),
-          TextButton(onPressed: () => Navigator.pushReplacementNamed(context, 'register'),
-           child: Text("Crear una nueva cuenta",
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)))
+          TextButton(
+              onPressed: () =>
+                  Navigator.pushReplacementNamed(context, 'register'),
+              child: Text("Crear una nueva cuenta",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)))
         ],
       ),
     )));
@@ -91,16 +93,16 @@ class _loginForm extends StatelessWidget {
                   onPressed: loginForm.isLoading
                       ? null
                       : () async {
-                         FocusScope.of(context).unfocus();
+                          FocusScope.of(context).unfocus();
                           final authService =
                               Provider.of<AuthService>(context, listen: false);
                           loginForm.isValidForm();
                           loginForm.isLoading = true;
-                          final String? errorMessage =
-                              await authService.login(loginForm.email, loginForm.password);
+                          final String? errorMessage = await authService.login(
+                              loginForm.email, loginForm.password);
                           if (errorMessage == null) {
-                            print("Navegar al home");
-                          }else{
+                            Navigator.pushReplacementNamed(context, 'home');
+                          } else {
                             print(errorMessage);
                             loginForm.isLoading = false;
                           }

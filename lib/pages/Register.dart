@@ -101,7 +101,7 @@ class _loginForm extends StatelessWidget {
                           final String? errorMessage =
                               await authService.createUser(loginForm.email, loginForm.password);
                           if (errorMessage == null) {
-                            print("Navegar al home");
+                             Navigator.pushReplacementNamed(context, 'home');
                           }else{
                             print(errorMessage);
                             loginForm.isLoading = false;

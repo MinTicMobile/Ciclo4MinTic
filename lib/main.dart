@@ -26,11 +26,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
-        initialRoute: 'login',
+        title: 'ColombiaTravel',
+        initialRoute: 'checking',
         routes: {
           "login": (_) => LoginScreen(),
           "register": (_) => Register(),
+          "home": (_) => HomePages(),
+          "checking" : (_) =>  CheckAuth()
         });
   }
 }
