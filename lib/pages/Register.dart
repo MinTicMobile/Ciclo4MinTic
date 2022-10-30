@@ -104,6 +104,12 @@ class _loginForm extends StatelessWidget {
                              Navigator.pushReplacementNamed(context, 'home');
                           }else{
                             print(errorMessage);
+                            if(errorMessage == 'INVALID_EMAIL'){
+                              NoticationsService.showSnackbar('Credenciales inválidas');
+                            }
+                             if(errorMessage == 'EMAIL_EXISTS'){
+                              NoticationsService.showSnackbar('Ya estas registrado');
+                            }
                             loginForm.isLoading = false;
                           }
                           

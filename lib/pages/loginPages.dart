@@ -102,8 +102,8 @@ class _loginForm extends StatelessWidget {
                               loginForm.email, loginForm.password);
                           if (errorMessage == null) {
                             Navigator.pushReplacementNamed(context, 'home');
-                          } else {
-                            print(errorMessage);
+                          } else {                           
+                            NoticationsService.showSnackbar('Credenciales inválidas');
                             loginForm.isLoading = false;
                           }
                         })

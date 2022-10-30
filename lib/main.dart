@@ -33,6 +33,9 @@ class MyApp extends StatelessWidget {
           "register": (_) => Register(),
           "home": (_) => HomePages(),
           "checking" : (_) =>  CheckAuth()
-        });
+        },
+          scaffoldMessengerKey: NoticationsService.messengerKey,
+        
+        );
   }
 }
