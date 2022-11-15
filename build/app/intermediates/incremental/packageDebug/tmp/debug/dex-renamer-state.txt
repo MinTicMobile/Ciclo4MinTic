@@ -1,4 +1,0 @@
-#Sat Oct 29 20:37:29 COT 2022
-base.0=D\:\\Alejo\\Universidad\\Udea\\Ciclo4\\DropApp\\Ciclo4MinTic\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
-renamed.0=classes.dex
-path.0=classes.dex
