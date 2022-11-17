@@ -13,6 +13,7 @@ class AppState extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: ( _ ) => AuthService() ),
+        ChangeNotifierProvider(create: ( _ ) => PoiService() )
       ],
       child: MyApp(),
     );
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
         routes: {
           "login": (_) => LoginScreen(),
           "register": (_) => Register(),
+          "detalle": (_) => DetallePages(),
           "home": (_) => HomePages(),
           "checking" : (_) =>  CheckAuth()
         },
