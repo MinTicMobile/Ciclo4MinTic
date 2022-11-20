@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:proyectoflutterapp/pages/pages.dart';
 import 'package:provider/provider.dart';
+import 'package:proyectoflutterapp/pages/poi_map.dart';
 import 'package:proyectoflutterapp/services/service.dart';
 void main() {
   runApp(AppState());
@@ -29,12 +30,14 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'ColombiaTravel',
         initialRoute: 'checking',
+        //initialRoute: 'mapa_demo',
         routes: {
           "login": (_) => LoginScreen(),
           "register": (_) => Register(),
           "detalle": (_) => DetallePages(),
           "home": (_) => HomePages(),
-          "checking" : (_) =>  CheckAuth()
+          "checking" : (_) =>  CheckAuth(),
+          'mapa': (_) =>  PoiLocation(poi: Provider.of<PoiService>(context).selectPoi)
         },
           scaffoldMessengerKey: NoticationsService.messengerKey,
         
